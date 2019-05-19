@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: #f9de9a;
 }
 
 .no-display {
@@ -7,10 +7,10 @@ body {
 }
 
 .center {
-    margin: auto;
-    padding: 10px;
-    padding-left:50px;
-    padding-right:50px;
+    margin: 0 auto;
+    /* padding: 10px; */
+    /* padding-left:50px; */
+    /* padding-right:50px; */
     text-align: center;
     font-size: 14px;
 }
@@ -42,9 +42,9 @@ body {
 }
 
 button.choose-file-button {
-  width: 200px;
-  height: 40px;
-  border-radius: 2px;
+  /* width: 200px; */
+  /* height: 40px; */
+  /* border-radius: 2px; */
   background-color: #ffffff;
   border: solid 1px #7052CB;
   font-size: 13px;
@@ -62,3 +62,19 @@ button.analyze-button {
 }
 
 button:focus {outline:0;}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 0.5s linear infinite;
+    margin: 0 auto;
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

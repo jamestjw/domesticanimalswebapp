@@ -14,9 +14,10 @@ function showPicked(input) {
 
 function analyze() {
     var uploadFiles = el('file-input').files;
-    if (uploadFiles.length != 1) alert('Please select 1 file to analyze!');
-
-    el('analyze-button').innerHTML = 'Analyzing...';
+    if (uploadFiles.length != 1) {alert('Please select 1 file to analyze!'); return}
+    el('result-label').innerHTML = ''
+    el('analyze-button').style.display = "none"
+    el('loader').style.display = 'block'
     var xhr = new XMLHttpRequest();
     var loc = window.location
     xhr.open('POST', `${loc.protocol}//${loc.hostname}:${loc.port}/analyze`, true);
@@ -26,6 +27,8 @@ function analyze() {
             var response = JSON.parse(e.target.responseText);
             el('result-label').innerHTML = `Result = ${response['result']}`;
         }
+        el('analyze-button').style.display = 'inline-block'
+        el('loader').style.display = 'none'
         el('analyze-button').innerHTML = 'Analyze';
     }
 
