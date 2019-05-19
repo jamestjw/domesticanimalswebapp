@@ -1,10 +1,3 @@
-# Starter for deploying [fast.ai](https://www.fast.ai) models on [Render](https://render.com)
+# Domestic Animals Classifier
 
-This repo can be used as a starting point to deploy [fast.ai](https://github.com/fastai/fastai) models on Render.
-
-The sample app described here is up at https://fastai-v3.onrender.com. Test it out with bear images!
-
-The guide for production deployment to Render is at https://course.fast.ai/deployment_render.html.
-
-Use this fast.ai forum thread for questions and community support: https://forums.fast.ai/t/deployment-platform-render/33953
-# domesticanimals
+A web app that takes in an image and predicts what animal it is.
