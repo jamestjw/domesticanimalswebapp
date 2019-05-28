@@ -59,9 +59,7 @@ async def analyze(request):
 
     prediction = res[0]
     prob = F.softmax(res[2],dim=-1)[res[1]]
-    import pdb; pdb.set_trace()
     prob = round(prob.item(),3)*100
-    # print(prob)
     return JSONResponse({'result': str(prediction),'prob':str(prob).upper()})
 
 if __name__ == '__main__':
