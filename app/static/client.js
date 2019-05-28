@@ -26,7 +26,7 @@ function analyze() {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
             // el('result-label').innerHTML = `Result = ${response['result']}`;
-            el('result-label').innerHTML = `We believe that there is ${response['prob']}% chance that it is a ${response['result']}.`;
+            el('result-label').innerHTML = `We believe that it is a ${response['result']}!`;
 
         }
         el('analyze-button').style.display = 'inline-block'

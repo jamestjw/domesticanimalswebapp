@@ -56,12 +56,12 @@ async def analyze(request):
     img = open_image(BytesIO(img_bytes))
 
     res = learn.predict(img)
-    # import pdb; pdb.set_trace()
 
     prediction = res[0]
     prob = F.softmax(res[2],dim=-1)[res[1]]
+    import pdb; pdb.set_trace()
     prob = round(prob.item(),3)*100
-    print(prob)
+    # print(prob)
     return JSONResponse({'result': str(prediction),'prob':str(prob).upper()})
 
 if __name__ == '__main__':
